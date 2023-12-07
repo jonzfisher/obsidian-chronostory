@@ -22,5 +22,5 @@
   },
   "include": [
     "**/*.ts"
-, "ExampleView.tsx"  ]
+, "StoryView.tsx"  ]
 }

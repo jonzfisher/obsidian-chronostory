@@ -1,13 +1,13 @@
 import { StrictMode } from "react";
-import { ItemView, WorkspaceLeaf } from "obsidian";
+import { ItemView, WorkspaceLeaf, EditorSelection } from "obsidian";
 import { Root, createRoot } from "react-dom/client";
 import React from 'react';
 import StoryClock from "./clock/StoryClock";
 // import React from "react";
 
-export const VIEW_TYPE_EXAMPLE = "example-view";
+export const STORYCLOCK_VIEW = "storyclock-view";
 
-export class ExampleView extends ItemView {
+export class StoryView extends ItemView {
 	root: Root | null = null;
 
 	constructor(leaf: WorkspaceLeaf) {
@@ -15,7 +15,7 @@ export class ExampleView extends ItemView {
 	}
 
 	getViewType() {
-		return VIEW_TYPE_EXAMPLE;
+		return STORYCLOCK_VIEW;
 	}
 
 	getDisplayText() {
