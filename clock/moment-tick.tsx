@@ -1,6 +1,7 @@
 import { useState, useEffect, RefObject } from 'react'
 import { Moment } from '../store/momentsSlice';
 import React from 'react';
+import '../styles.css'
 
 interface MomentTickProps {
   position: number,
@@ -50,8 +51,9 @@ export default function MomentTick(
         cx="50%"
         cy="50%"
         r="40%"
-        stroke="rgb(0,255,0,0.9)"
+        // stroke="rgb(0,255,0,0.9)"
         clipPath="url(#clock-clip)"
+        className="momentHighlight"
       />
       {/* pointerEvents="stroke" makes problem for whole circle and only the stroke matters
           for these ticks, which are made up of strokes */}
@@ -64,9 +66,10 @@ export default function MomentTick(
         cx="50%"
         cy="50%"
         r="40%"
-        stroke={`rgb(0,255,0,${moment?.id == currentMoment?.id ? 1.0 : 0.0})`}
+        // stroke={`rgb(0,255,0,${moment?.id == currentMoment?.id ? 1.0 : 0.0})`}
         clipPath="url(#markers)"
         pointerEvents="stroke"
+        className={`${moment?.id === currentMoment?.id ? 'momentHighlight' : 'momentDefault'}`}
       />
     </>
   )

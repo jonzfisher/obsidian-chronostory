@@ -6,3 +6,12 @@ available in the app when your plugin is enabled.
 If your plugin does not need CSS, delete this file.
 
 */
+.momentDefault {
+  stroke: none;
+}
+.momentHighlight {
+  stroke: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+}
+.description-text {
+  color: var(--color-base-100);
+}

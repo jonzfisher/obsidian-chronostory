@@ -1,9 +1,7 @@
-import { StrictMode } from "react";
 import { ItemView, WorkspaceLeaf, EditorSelection } from "obsidian";
+import React, { StrictMode } from "react";
 import { Root, createRoot } from "react-dom/client";
-import React from 'react';
 import StoryClock from "./clock/StoryClock";
-// import React from "react";
 
 export const STORYCLOCK_VIEW = "storyclock-view";
 
