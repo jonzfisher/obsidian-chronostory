@@ -1,19 +1,20 @@
-import { App, Editor, MarkdownView, Modal, Plugin, WorkspaceLeaf } from 'obsidian';
+// import { App, Editor, MarkdownView, Modal, Plugin, WorkspaceLeaf } from 'obsidian';
+import { Plugin } from 'obsidian';
 import { CodeBlockProcessor } from './src/CodeBlockProcessor';
-import { StoryView, STORYCLOCK_VIEW } from './storyclockView'
+// import { StoryView, STORYCLOCK_VIEW } from './storyclockView'
 
 // Remember to rename these classes and interfaces!
 
-interface StoryclockPluginSettings {
-	mySetting: string;
-}
+// interface StoryclockPluginSettings {
+// 	mySetting: string;
+// }
 
-const DEFAULT_SETTINGS: StoryclockPluginSettings = {
-	mySetting: 'default'
-}
+// const DEFAULT_SETTINGS: StoryclockPluginSettings = {
+// 	mySetting: 'default'
+// }
 
 export default class StoryClockPlugin extends Plugin {
-	settings: StoryclockPluginSettings;
+	// settings: StoryclockPluginSettings;
 
 	async onload() {
 		// await this.loadSettings();
@@ -32,7 +33,7 @@ export default class StoryClockPlugin extends Plugin {
 		// This creates an icon in the left ribbon.
 		// For Storyclock, it would be nice to highlight the text
 		// const ribbonIconEl = this.addRibbonIcon('dice', 'Storyclock', (evt: MouseEvent) => {
-		  // Bring in the highlighted text in Editor
+		// Bring in the highlighted text in Editor
 
 
 			// Called when the user clicks the icon.
