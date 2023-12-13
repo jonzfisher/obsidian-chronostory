@@ -14,7 +14,6 @@ interface ClockProps {
 
 export default function StoryClock(props: ClockProps) {
   let { duration = 7200, hideCenter = false, moments } = props;
-  // const moments = [] as Moment[] // fill example in to start with
   const [currentMoment, setCurrentMoment] = useState<any>(null)
   const [centerLabelOpacity, setCenterLabelOpacity] = useState(.33)
   const tickRefs = useMemo(
