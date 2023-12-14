@@ -13,7 +13,7 @@ interface ClockProps {
 }
 
 export default function StoryClock(props: ClockProps) {
-  let { duration = 7200, hideCenter = false, moments } = props;
+  let { duration, hideCenter = false, moments } = props;
   const [currentMoment, setCurrentMoment] = useState<any>(null)
   const [centerLabelOpacity, setCenterLabelOpacity] = useState(.33)
   const tickRefs = useMemo(
@@ -21,7 +21,16 @@ export default function StoryClock(props: ClockProps) {
     [moments]
   )
 
-  const calculatePosition = (seconds: number): number => -1 * seconds / duration;
+  const calculatePosition = (seconds: number): number => -1 * seconds / (duration ? duration : 7200);
+
+  useEffect(()=> {
+    if(!duration) setCurrentMoment({
+      description: 'Missing runtime in the story to properly map beats. Add line with format `runtime::01:00:00`'
+    })
+    if(moments.length == 0) setCurrentMoment({
+      description: 'No moments have been added. Add a moment with this format: `HH:MM:SS Description of moment`'
+    })
+  })
 
   return (
     <div style={{
