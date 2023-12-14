@@ -34,10 +34,12 @@ export default function MomentTick(
 
     tick.addEventListener("touchmove", updateCenterLabel)
     tick.addEventListener("mouseenter", updateCenterLabel)
+    tick.addEventListener("click", updateCenterLabel)
 
     return () => {
       tick.removeEventListener("touchmove", updateCenterLabel)
       tick.removeEventListener("mouseenter", updateCenterLabel)
+      tick.addEventListener("click", updateCenterLabel)
     }
   }, [currentMoment])
 
@@ -61,8 +63,8 @@ export default function MomentTick(
         ref={tickReference}
         fill="none"
         strokeWidth="26"
-        strokeDashoffset={`calc((${position} + 0.002) * 40% * 2 * pi)`}
-        strokeDasharray="calc(0.006 * 40% * 2 * pi) calc(0.994 * 40% * 2 * pi)"
+        strokeDashoffset={`calc((${position} + 0.003) * 40% * 2 * pi)`}
+        strokeDasharray="calc(0.008 * 40% * 2 * pi) calc(0.992 * 40% * 2 * pi)"
         cx="50%"
         cy="50%"
         r="40%"
