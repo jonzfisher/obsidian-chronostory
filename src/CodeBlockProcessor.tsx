@@ -44,7 +44,7 @@ export class CodeBlockProcessor {
   processRuntime(sourceLines: string[]) {
     const runtimeRows = sourceLines.filter((row) => row.startsWith("runtime"));
     const parts = runtimeRows[0]?.split("::");
-    if (parts.length > 1) {
+    if (parts?.length > 1) {
       this.runtime = this.timestampToSeconds(parts[1]); // to seconds
     } else {
       console.error("no valid runtime found")
@@ -59,7 +59,6 @@ export class CodeBlockProcessor {
     for (let i = 0; i < momentRows.length; i++) {
       const match = momentRows[i].match(regex);
       if(match) {
-        debugger;
         const timestamp: number = this.timestampToSeconds(match[0]);
         const description: string = momentRows[i].replace(match[0], "");
         this.moments.push({
