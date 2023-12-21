@@ -14,8 +14,8 @@ Then while you're watching or listening to your story, type in the timestamp of 
 
 ![image](https://github.com/jonzfisher/obsidian-chronostory/assets/6652546/75326eaa-44fc-4282-8b2e-dc4d86731c9d)
 
-Then the clock will show up like so when you focus away from the text as with many Obsidian plugins.
+Then the clock will show up like so when you focus away from the text as with many Obsidian plugins. You can select the `</>` icon in the top right to switch back to editing the Storyclock.
 
 <img width="603" alt="image" src="https://github.com/obsidianmd/obsidian-releases/assets/6652546/52fd5bc6-1ba4-46d0-ab09-a8c6dcc05759">
 
-And you can select the `</>` icon in the top right to switch back to editing the Storyclock.
+
